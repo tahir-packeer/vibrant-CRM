@@ -177,8 +177,4 @@ class OrderMobileController extends Controller
             ], 500);
         }
     }
-
-
-
-
 }

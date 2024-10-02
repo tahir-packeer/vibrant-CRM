@@ -19,7 +19,6 @@ class UserMobileController extends Controller
                 'message' => 'User not found.'
             ], 404);
         }
-
         return response()->json([
             'user' => $user
         ], 200);
@@ -45,8 +44,6 @@ class UserMobileController extends Controller
                 'message' => 'User not found.'
             ], 404);
         }
-
-        // Check if a profile image is provided
         if ($request->has('profile_image')) {
             // Get the base64 encoded image
             $base64Image = $request->profile_image;
@@ -64,19 +61,15 @@ class UserMobileController extends Controller
             if (!File::exists(public_path('images/profile_images'))) {
                 File::makeDirectory(public_path('images/profile_images'), 0755, true);
             }
-
-            // Store the image in the public/images/profile_images folder
             file_put_contents($imagePath, $image);
 
             // Update the user's profile image path (relative to the public folder)
             $user->profile_image = '/images/profile_images/' . $imageName;
         }
-
         // Update the user's name and email
         $user->name = $request->name;
         $user->email = $request->email;
 
-        // Save the changes to the user
         $user->save();
 
         return response()->json([
@@ -84,6 +77,4 @@ class UserMobileController extends Controller
             'user' => $user
         ], 200);
     }
-
-
 }
