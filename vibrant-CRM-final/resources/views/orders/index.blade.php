@@ -8,7 +8,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header text-white">
-                        <h5 class="mb-0">Deliverers List</h5>
+                        <h5 class="mb-0">Orders List</h5>
                     </div>
                     <div class="card-body">
                         <table class="table table-dark table-bordered">
