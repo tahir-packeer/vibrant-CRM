@@ -42,8 +42,7 @@ Route::post('register', [RegisterController::class, 'register']);
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    //auth routes
-    
+    //
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
