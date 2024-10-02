@@ -73,7 +73,6 @@ class CartController extends Controller
 
         return response()->json(['message' => 'Cart item deleted successfully'], 200);
     }
-
     public function updateProductQuantity(Request $request, $cart_id)
     {
         // Validate the request data
@@ -84,7 +83,6 @@ class CartController extends Controller
         if ($validator->fails()) {
             return response()->json(['error' => $validator->errors()], 400);
         }
-
         // Find the cart item
         $cartItem = Cart::find($cart_id);
 
@@ -92,7 +90,6 @@ class CartController extends Controller
             return response()->json(['error' => 'Cart item not found'], 404);
         }
 
-        // Update the product quantity and recalculate the total price
         $cartItem->product_qty = $request->product_qty;
         $cartItem->total_price = $cartItem->item_price * $request->product_qty;
 
@@ -101,6 +98,4 @@ class CartController extends Controller
 
         return response()->json(['message' => 'Cart item updated successfully', 'cartItem' => $cartItem], 200);
     }
-
-
 }
