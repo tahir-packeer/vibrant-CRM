@@ -25,6 +25,8 @@ Route::post('/login',[Controller::class, 'login']);
 
                             // Category API
 Route::get('/categories', [CategoryMobileController::class, 'index']);
+
+                        //get category by id
 Route::get('/categories/{id}', [CategoryMobileController::class, 'show']);
 
                             //Product API
