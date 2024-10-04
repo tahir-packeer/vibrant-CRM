@@ -72,16 +72,8 @@
                 </div>
             </div>
 
-            <!-- Card 6: Customizations Management -->
-            <div class="col-md-4">
-                <div class="card shadow-lg">
-                    <div class="card-body text-center">
-                        <i class="bi bi-sliders fs-1 mb-3 custom-icon"></i>
-                        <h5 class="card-title">Customizations Management</h5>
-                        <a href="{{ url('/customizations') }}" class="btn btn-primary mt-3">Manage Customizations</a>
-                    </div>
-                </div>
-            </div>
+           
+
         </div>
     </div>
 @endsection
