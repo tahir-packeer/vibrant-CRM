@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Order;
@@ -33,6 +34,7 @@ class OrderMobileController extends Controller
             $order->product_qty = $validatedData['product_qty'];
             $order->user_id = $validatedData['user_id'];
             $order->user_name = $validatedData['user_name'];
+
             $order->user_address = $validatedData['user_address'];
             $order->payment_status = $validatedData['payment_status'];
             $order->order_status = $validatedData['order_status'];
@@ -145,6 +147,7 @@ class OrderMobileController extends Controller
                     ->where('product_id', $productData['product_id'])
                     ->delete();
             }
+            Cart::where('user_id', $request->user_id)->delete();
 
             // Return success response with all created orders
             return response()->json([

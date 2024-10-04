@@ -10,7 +10,7 @@
         </div>
     </div>
     <style>
-        .custom-icon {`
+        .custom-icon {
             color: #ffffff; /* Custom color */
         }
     </style>
@@ -72,7 +72,7 @@
                 </div>
             </div>
 
-           
+
 
         </div>
     </div>

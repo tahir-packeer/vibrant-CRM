@@ -29,11 +29,6 @@
                     <i class="bi bi-truck me-2"></i> Deliverers
                 </a>
             </li>
-            <li>
-                <a href="{{ url('/customizations') }}" class="nav-link d-flex align-items-center text-white">
-                    <i class="bi bi-sliders me-2"></i> Customizations
-                </a>
-            </li>
         </ul>
     </div>
 

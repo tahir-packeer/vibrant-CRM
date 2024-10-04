@@ -73,6 +73,22 @@ class CartController extends Controller
 
         return response()->json(['message' => 'Cart item deleted successfully'], 200);
     }
+
+    public function emptyCartByUserId($user_id)
+    {
+        // Check if the user exists
+        $user = User::find($user_id);
+
+        if (!$user) {
+            return response()->json(['error' => 'User not found'], 404);
+        }
+
+        // Delete all cart items for the user
+        Cart::where('user_id', $user_id)->delete();
+
+        return response()->json(['message' => 'Cart emptied successfully'], 200);
+    }
+
     public function updateProductQuantity(Request $request, $cart_id)
     {
         // Validate the request data
