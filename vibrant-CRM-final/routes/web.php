@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryWebController;
+use App\Http\Controllers\ChartsGraph;
 use App\Http\Controllers\CustomizationWebController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DelivererWebController;
@@ -73,5 +74,9 @@ Route::put('/deliverers/{id}', [DelivererWebController::class, 'update'])->name(
 Route::get('/customizations', [CustomizationWebController::class, 'index'])->name('customizations.index');
 Route::get('/customizations/{id}/edit', [CustomizationWebController::class, 'edit'])->name('customizations.edit');
 Route::put('/customizations/{id}', [CustomizationWebController::class, 'update'])->name('customizations.update');
+
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
 });

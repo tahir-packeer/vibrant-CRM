@@ -28,7 +28,6 @@ class CategoryWebController extends Controller
         $category = new Category();
         $category->name = $request->name;
         $category->description = $request->description;
-        $category->fabric_type = $request->fabric_type;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -55,7 +54,6 @@ class CategoryWebController extends Controller
         $category = Category::findOrFail($id);
         $category->name = $request->name;
         $category->description = $request->description;
-        $category->fabric_type = $request->fabric_type;
 
         if ($request->hasFile('image')) {
             $file = $request->file('image');

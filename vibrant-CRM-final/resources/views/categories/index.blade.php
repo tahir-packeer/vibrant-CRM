@@ -19,7 +19,6 @@
                                 <th>Image</th>
                                 <th>Name</th>
                                 <th>Description</th>
-                                <th>Fabric Type</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -35,7 +34,6 @@
                                     </td>
                                     <td class="text-white">{{ $category->name }}</td>
                                     <td class="text-white">{{ $category->description }}</td>
-                                    <td class="text-white">{{ $category->fabric_type }}</td>
                                     <td>
                                         <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-warning">Edit</a>
                                         <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline-block;">

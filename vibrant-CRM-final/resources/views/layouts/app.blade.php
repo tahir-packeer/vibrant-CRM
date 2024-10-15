@@ -10,6 +10,7 @@
     <title>{{ config('app.name', 'Vibrant') }}</title>
 
     <link rel="icon" href="{{ asset('images/logo1.png') }}" style="border-radius: 10px" type="image/x-icon">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">

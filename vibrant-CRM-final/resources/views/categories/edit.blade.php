@@ -19,11 +19,9 @@
                 <label for="description" class="form-label text-white">Description</label>
                 <textarea name="description" class="form-control" id="description">{{ $category->description }}</textarea>
             </div>
-            <div class="mb-3">
-                <label for="fabric_type" class="form-label text-white">Fabric Type</label>
-                <input type="text" name="fabric_type" class="form-control" id="fabric_type" value="{{ $category->fabric_type }}">
-            </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
     </div>
 @endsection
+
+

@@ -10,6 +10,15 @@ use Illuminate\Support\Facades\Storage;
 
 class UserMobileController extends Controller
 {
+
+    public function index()
+    {
+        // Fetch users with user_type 'customer' and 'admin'
+        $customers = User::where('user_type', 'customer')->get();
+        $admins = User::where('user_type', 'admin')->get();
+
+        return view('users.index', compact('customers', 'admins'));
+    }
     // Show user profile
     public function show($id)
     {
